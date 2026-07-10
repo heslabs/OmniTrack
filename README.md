@@ -19,7 +19,7 @@ vlc rtsp://192.168.52.83:8554/drone18
 ffplay -rtsp_transport tcp "rtsp://192.168.52.83:8554/drone18"
 ```
 
-
+**run-ffplay.sh**
 ```
 #!/bin/bash -f
 if [ $# -eq 0 ]; then
