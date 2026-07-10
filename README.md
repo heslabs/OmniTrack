@@ -31,9 +31,11 @@ git clone https://github.com/eyepop-ai/eyepop-mediamtx
 ```
 
 **Installation**
+
 There are several installation methods available: standalone binary, Docker image, Arch Linux package and OpenWrt binary.
 
 **Standalone binary**
+
 Download and extract a standalone binary from the release page that corresponds to your operating system and architecture.
 
 * release page: https://github.com/bluenviron/mediamtx/releases
