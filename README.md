@@ -90,6 +90,25 @@ sudo apt update
 sudo apt install livemedia-utils
 ```
 
+If that fails, uninstall the APT version and install the Snap version:
+```
+sudo apt remove vlc
+sudo snap install vlc
+```
+
+Verify with FFmpeg: To ensure the SAT>IP tuner is working, try running ffplay in your terminal.
+```
+ffplay -rtsp_transport tcp "rtsp://your-sat-ip-address"
+```
+
+
+#### Check Local and Network Firewalls
+A firewall blocking the RTSP port (typically 554 or 8554) will drop the negotiation mid-session.
+Linux: If running ufw, allow the RTSP port:
+```
+sudo ufw allow 554/tcp
+```
+
 ---
 #### Error
 
