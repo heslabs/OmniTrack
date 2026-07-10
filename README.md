@@ -47,7 +47,7 @@ git clone https://github.com/eyepop-ai/eyepop-mediamtx
 ### Installation
 There are several installation methods available: standalone binary, Docker image, Arch Linux package and OpenWrt binary.
 
-#### Standalone binary
+### Standalone binary
 Download and extract a standalone binary from the release page that corresponds to your operating system and architecture.
 
 * release page: https://github.com/bluenviron/mediamtx/releases
@@ -65,14 +65,16 @@ Start the server:
 
 
 ---
-#### Using Docker
+### Using Docker
 If you prefer running it inside a containerized environment, pull and launch the official MediaMTX image with host networking mode:
 
 ```
 docker run --rm -it --network=host bluenviron/mediamtx
 ```
 
-Using Linux Systemd ServiceTo manage it as a persistent background service on Linux distributions (like Ubuntu or Raspberry Pi OS), create a service file and initialize it via systemctl:
+---
+### Using Linux Systemd Service
+To manage it as a persistent background service on Linux distributions (like Ubuntu or Raspberry Pi OS), create a service file and initialize it via systemctl:
 
 ```
 sudo systemctl daemon-reload
