@@ -75,6 +75,104 @@ Start the server:
 2026/07/10 15:09:10 INF [MoQ] started with listeners on :8892 (TCP/HTTP2), :8892 (UDP/HTTP3)
 ```
 
+```
+vlc rtsp://127.0.0.1:8554/drone18
+vlc rtsp://192.168.52.83:8554/drone18
+```
+
+---
+#### Check for Missing Linux Live555 Packages (Linux Users)
+Many Linux distributions (such as Ubuntu, Debian, or Linux Mint) strip the live555 library out of the default VLC repository package due to licensing and maintainer changes. Without it, VLC cannot handle standard RTSP streams and passes them to SAT>IP.
+
+* Fix for Ubuntu/Debian/Mint: Install the missing multimedia streaming library or transition to the official Snap/Flatpak package which bundles it natively:
+```
+sudo apt update
+sudo apt install livemedia-utils
+```
+
+---
+#### Error
+
+```
+vlc rtsp://127.0.0.1:8554/drone18
+VLC media player 3.0.20 Vetinari (revision 3.0.20-0-g6f0d0ab126b)
+[00005f604ad74550] main libvlc: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+[000077a0ec001580] satip stream error: Failed to setup RTSP session
+```
+
+The VLC error satip stream error: Failed to setup RTSP session occurs because VLC incorrectly routes a standard RTSP camera or server link through its internal SAT>IP (Satellite-over-IP) access module instead of its primary live555 RTSP engine. This happens when VLC cannot properly handle the network handshake, lacks specific libraries, or experiences a protocol transport mismatch.
+
+ 
+---
+#### Error message
+```
+Your input can't be opened:
+VLC is unable to open the MRL 'rtsp://127.0.0.1:8554/drone18'. Check the log for details.
+```
+
+1. Check if the Port is Listening
+```
+sudo lsof -i :8554
+```
+
+Result: If no lines are returned, your streaming server is not running or failed to bind to that port.
+
+```
+demo@cxa:~/labs/qcom6a/mediamtx$ sudo lsof -i :8554
+COMMAND      PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+mediamtx 1432846 demo    7u  IPv6 2383002      0t0  TCP *:8554 (LISTEN)
+mediamtx 1432846 demo   18u  IPv6 2375608      0t0  TCP localhost:8554->localhost:34352 (ESTABLISHED)
+ffmpeg   1436824 demo    4u  IPv4 2391288      0t0  TCP localhost:34352->localhost:8554 (ESTABLISHED)
+```
+
+---
+2. Switch VLC from UDP to TCP
+
+RTSP often drops packets over UDP, causing VLC to fail the initial handshake. Forced TCP configuration fixes this.
+* Open VLC.
+* Go to Tools > Preferences (or Ctrl + P).
+* At the bottom left under Show settings, select All.
+* Navigate to Input / Codecs > Demuxers > RTP/RTSP.
+* Check the box for Tunnel RTSP and RTP over HTTP or change the RTP transport protocol to TCP.
+* Click Save and restart VLC.
+
+
+---
+#### Quick Troubleshoot Checklist
+* Check the server status: Ensure your RTSP streaming software is actively running.
+* Verify the port number: Confirm that 8554 is the correct port configuration.
+* Verify the stream URI: Double-check if /drone18 is the exact path name.
+* Test the local loopback: Ensure your local firewall allows traffic on port 8554.
+
+#### How to Fix It
+1. Verify Port AvailabilityThe RTSP server might have failed to bind to port 8554. Check if the port is listening
+
+Linux/macOS: Run 
+```
+netstat -tuln | grep 8554 or ss -tuln
+```
+
+3. Test Connection with Netcat or Telnet
+Confirm that your system can physically reach the port
+```
+nc -zv 127.0.0.1 8554
+```
+
+Result:
+```
+Connection to 127.0.0.1 8554 port [tcp/*] succeeded!
+```
+
+If this times out or says "Connection refused", the streaming server is not running properly.
+
+3. Change the Protocol in VLC
+Sometimes VLC struggles with automatic UDP/TCP switching for RTSP. Force VLC to use TCP
+* Open VLC media player.Go to Tools > Preferences (or Ctrl + P).
+* Select All under Show settings at the bottom left.
+* Expand Input / Codecs > Demuxers > RTP/RTSP.
+* Check the box for Use RTP over RTSP (TCP).
+* Click Save and restart VLC.
+
 
 ---
 ### Using Docker
