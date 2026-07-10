@@ -36,7 +36,7 @@ ffmpeg -re -i input.mp4 -c copy -f rtsp -rtsp_flags listen rtsp://127.0.0
 ```
 
 ---
-### MediaMTX
+## MediaMTX
 
 To start MediaMTX, run the standalone binary executable file or launch its official container, depending on your system setup.Execution MethodsUsing Standalone BinaryNavigate to the directory where you extracted the MediaMTX files and execute the command corresponding to your operating system:
 
@@ -44,8 +44,7 @@ To start MediaMTX, run the standalone binary executable file or launch its offic
 git clone https://github.com/eyepop-ai/eyepop-mediamtx
 ```
 
-
-#### Installation
+### Installation
 There are several installation methods available: standalone binary, Docker image, Arch Linux package and OpenWrt binary.
 
 #### Standalone binary
@@ -66,9 +65,8 @@ Start the server:
 
 
 ---
-
-
-Using DockerIf you prefer running it inside a containerized environment, pull and launch the official MediaMTX image with host networking mode:
+#### Using Docker
+If you prefer running it inside a containerized environment, pull and launch the official MediaMTX image with host networking mode:
 
 ```
 docker run --rm -it --network=host bluenviron/mediamtx
@@ -80,7 +78,11 @@ Using Linux Systemd ServiceTo manage it as a persistent background service on Li
 sudo systemctl daemon-reload
 sudo systemctl enable --now mediamtx.service
 ```
-VerificationOnce initialized, the terminal console will output active listener indicators showing operational status on the default ports:
+
+---
+### Verification
+
+Once initialized, the terminal console will output active listener indicators showing operational status on the default ports:
 * RTSP: Port 8554
 * RTMP: Port 1935
 * HLS: Port 8888
