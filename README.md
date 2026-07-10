@@ -24,7 +24,7 @@ ffplay -rtsp_transport tcp "rtsp://192.168.52.83:8554/drone18"
 ### Start MediaMTX
 
 To start MediaMTX, run the standalone binary executable file or launch its official container, depending on your system setup.
-Execution Methods: Using Standalone Binary: Navigate to the directory where you extracted the MediaMTX files and execute the command corresponding to your operating system:
+* Execution Methods: Using Standalone Binary: Navigate to the directory where you extracted the MediaMTX files and execute the command corresponding to your operating system:
 
 ```
 git clone https://github.com/eyepop-ai/eyepop-mediamtx
