@@ -20,6 +20,15 @@ ffplay -rtsp_transport tcp "rtsp://192.168.52.83:8554/drone18"
 ```
 
 
+```
+#!/bin/bash -f
+if [ $# -eq 0 ]; then
+    echo "./run-ffplay.sh 192.168.52.81"
+    exit 1
+fi
+ffplay -rtsp_transport tcp "rtsp://$1:8554/drone18"
+```
+
 ---
 ### Start MediaMTX
 
