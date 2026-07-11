@@ -74,6 +74,8 @@ Then in the browser
 <br>
 <img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/1a7045d9-c0b3-4d80-ae69-b413bef76a9e" />
 
+<br>
+<img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/58f518ab-1a50-4ec2-9bc0-c6349f5f8876" />
 
 
 ---
