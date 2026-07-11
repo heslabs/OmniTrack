@@ -59,7 +59,12 @@ Which compiled model to load and its geometry.
 [logging] persistent trace CSV
 ```
 
-<br>
+---
+#### Data Flow
+Pixels enter at the left, the FSM decides what to do, four output channels carry the result.
+* Three output channels are opt-in: recording, streaming, and (effectively) HDMI display
+  * set sink_pipeline = "" to disable
+* The bbox UDP feed is always on — it doubles as a liveness signal: idle and tracking states both emit datagrams.
 
 ```
 [ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
