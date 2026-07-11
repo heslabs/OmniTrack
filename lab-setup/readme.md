@@ -12,6 +12,7 @@
 2. In your terminal window, run:
 ```
 bash <conda-installer-name>-latest-Linux-x86_64.sh
+bash ./Anaconda3-2025.12-2-Linux-x86_64.sh
 ```
 * conda-installer-name will be one of "Miniconda3", "Anaconda", or "Miniforge3".
 
