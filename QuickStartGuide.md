@@ -43,6 +43,7 @@ The system processes video data linearly from Capture to FSM, which dynamically 
 * **Streaming**: Opt-in transmission. Delivers low-latency RTP H.264 video streams to a connected network peer.
 
 <br>
+
 ```
 [ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
                                           |
