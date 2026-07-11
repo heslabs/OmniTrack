@@ -13,7 +13,7 @@
 ```
 bash <conda-installer-name>-latest-Linux-x86_64.sh
 ```
-conda-installer-name will be one of "Miniconda3", "Anaconda", or "Miniforge3".
+* conda-installer-name will be one of "Miniconda3", "Anaconda", or "Miniforge3".
 
 3. Follow the prompts on the installer screens. If you are unsure about any setting, accept the defaults. You can change them later. To make the changes take effect, close and then re-open your terminal window.
 
