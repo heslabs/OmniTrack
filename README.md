@@ -32,7 +32,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 * Boards: Radxa Dragon [Q6A](https://radxa.com/products/dragon/q6a/)
 
 <br>
-<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/e1c9f73e-5383-4db7-97e0-a4b79d79d074" />
+<img width="350" height="220" alt="image" src="https://github.com/user-attachments/assets/e1c9f73e-5383-4db7-97e0-a4b79d79d074" />
 
 
 ### Tech Specs
