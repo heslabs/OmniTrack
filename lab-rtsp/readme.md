@@ -82,26 +82,25 @@ To start MediaMTX, run the standalone binary executable file or launch its offic
 ```
 git clone https://github.com/eyepop-ai/eyepop-mediamtx
 ```
-
 #### Installation
 There are several installation methods available: standalone binary, Docker image, Arch Linux package and OpenWrt binary.
 
 #### Standalone binary
 Download and extract a standalone binary from the release page that corresponds to your operating system and architecture.
+* [[release page]](https://github.com/bluenviron/mediamtx/releases): mediamtx_v1.19.2_linux_amd64.tar.gz (25.4MB)
 
-* release page: https://github.com/bluenviron/mediamtx/releases
-* mediamtx_v1.19.2_linux_amd64.tar.gz (25.4MB)
-
+#### Download the tar file
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.19.2/mediamtx_v1.19.2_linux_amd64.tar.gz
+tar zxvf mediamtx_v1.19.2_linux_amd64.tar.gz
+chmod +x ./mediamtx
 ```
 
-Start the server:
+#### Start the server and check the status
 ```
 ./mediamtx
 ```
-
-Log message
+* Log message
 ```
 2026/07/10 15:09:10 INF MediaMTX v1.19.2, linux, amd64
 2026/07/10 15:09:10 INF configuration loaded from /home/demo/labs/qcom6a/mediamtx/mediamtx.yml
