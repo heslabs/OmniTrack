@@ -46,6 +46,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 ## Test Results
 
 ### Recorded output video
+* Youtube Video [[YT]](https://youtu.be/GfsY-D23dP4)
 
 <img width="850" height="550" alt="image" src="https://github.com/user-attachments/assets/36025290-fb19-46ce-923c-0ed67100a215" />
 
