@@ -42,6 +42,7 @@ The system processes video data linearly from Capture to FSM, which dynamically 
 * **Recording**: Opt-in storage. Saves evidence MP4 files alongside synchronized bbox.csv telemetry.
 * **Streaming**: Opt-in transmission. Delivers low-latency RTP H.264 video streams to a connected network peer.
 
+<br>
 ```
 [ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
                                           |
@@ -53,7 +54,7 @@ The system processes video data linearly from Capture to FSM, which dynamically 
 ```
 
 ---
-## Operation Modes
+## Setting Operation Modes
  
 Configure your pipeline by defining inputs, behavior, and outputs in **config/runtime.toml**. Update these parameters and restart the service to apply changes. Below is a structured implementation of your operational modes for the runtime configuration file.
 
