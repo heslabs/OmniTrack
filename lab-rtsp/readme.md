@@ -71,7 +71,7 @@ until grep -q "\[runtime\] all threads up" "$LOG" 2>/dev/null; do
     sleep 0
 done
 
-cd /home/deepmentor/sandbox/omnitrack_client
+cd ~/sandbox/omnitrack_client
 # by pass top-left x y w h not cx cy
 python send_init.py 127.0.0.1 5005 546 463 79 53
 wait "$TRACKER_PID"
