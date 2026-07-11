@@ -77,18 +77,16 @@ wait "$TRACKER_PID"
 ### Install and Start MediaMTX
 
 To start MediaMTX, run the standalone binary executable file or launch its official container, depending on your system setup.
-* Execution Methods: Using Standalone Binary: Navigate to the directory where you extracted the MediaMTX files and execute the command corresponding to your operating system:
 
+#### Clone the Github
 ```
 git clone https://github.com/eyepop-ai/eyepop-mediamtx
 ```
 
-**Installation**
-
+#### Installation
 There are several installation methods available: standalone binary, Docker image, Arch Linux package and OpenWrt binary.
 
-**Standalone binary**
-
+#### Standalone binary
 Download and extract a standalone binary from the release page that corresponds to your operating system and architecture.
 
 * release page: https://github.com/bluenviron/mediamtx/releases
@@ -98,8 +96,7 @@ Download and extract a standalone binary from the release page that corresponds 
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.19.2/mediamtx_v1.19.2_linux_amd64.tar.gz
 ```
 
-
-**Start the server:**
+Start the server:
 ```
 ./mediamtx
 ```
