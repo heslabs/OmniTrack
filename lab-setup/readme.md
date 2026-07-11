@@ -27,9 +27,31 @@ conda list
 _anaconda_depends                2025.12               py313_mkl_0
 ```
 
+---
+## BBox Selector
+
+An interactive bounding-box selector built with [Gradio](https://www.gradio.app/).
+
+Upload a video, choose a frame, then **click once** for the top-left corner and **click again** for the bottom-right corner. The box is drawn on the frame and the sliders sync automatically. Sliders remain available for fine-tuning, and the current box is shown as a copy/paste-ready snippet.
+
+### Features
+* Upload a video (`.mp4`, `.avi`, `.mov`, `.mkv`) and scrub through frames.
+* Two-click bounding-box selection directly on the preview image.
+* Fine-tune the box with center-X / center-Y / width / height sliders.
+* Live coordinate readout (top-left and bottom-right corners).
+* Bounding-box output formatted as `x y w h` (top-left + size).
+
+### Requirements
+
+* **Python** 3.10+ (the code uses `X | Y` type-hint syntax).
+* **ffmpeg / ffprobe** available on your `PATH` (used to read video info and extract frames).
+* Python packages listed in [requirements-bbox-selector.txt](requirements-bbox-selector.txt):
+  * `gradio==6.15.2`
+  * `pillow==12.2.0`
+
 
 ---
-## Install bbox_selector
+### Install bbox_selector
 
 ```
 ## Create a new environment with Python 3.10
@@ -45,7 +67,7 @@ $ pip install -r requirements-bbox-selector.txt
 ```
 
 ---
-## Luanch bbox_selector
+### Luanch bbox_selector
 
 Start the app:
 ```
@@ -79,6 +101,7 @@ Then in the browser
 
 
 <br>
+
 ```
 ## Bounding Box output (x y w h — top-left corner + size)
 418 163 268 158
@@ -88,7 +111,7 @@ Then in the browser
 
 
 ---
-#### Configuration
+### Configuration
 
 Server host/port are set at the bottom of [bbox_selector.py](bbox_selector.py):
 
