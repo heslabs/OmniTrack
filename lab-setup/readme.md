@@ -54,10 +54,10 @@ $ python bbox_selector.py
 
 The server launches on all interfaces at port **8501**:
 ```
-http://localhost:8501
+$ google-chrome http://localhost:8501
 ```
 
-Then in the browser:
+Then in the browser
 
 1. **Upload a video** using the file picker.
 2. Use the **Frame index** slider to pick a frame.
@@ -67,6 +67,14 @@ Then in the browser:
 5. Optionally fine-tune with the **reticle_cx / cy / w / h** sliders.
 6. Copy the value from the **Bounding Box output** box (format: `x y w h`,
    i.e. top-left corner plus width and height).
+
+<br>
+<img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/e0fecd93-2ebc-4134-8527-e7eee37b664a" />
+
+<br>
+<img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/1a7045d9-c0b3-4d80-ae69-b413bef76a9e" />
+
+
 
 ---
 #### Configuration
