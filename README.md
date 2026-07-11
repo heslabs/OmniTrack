@@ -41,29 +41,6 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 * **GPU**: Qualcomm® Adreno 643, OpenGL® ES 3.2, 2.0, 1.1, Vulkan® 1.1 / 1.2 / 1.3, OpenCL™ 2.2, DirectX Feature Level 12
 * **AI**: Total AI compute performance: 12 TOPS, Hexagon DSP with dual HVX, Hexagon Tensor Accelerator, Hexagon Coprocessor 2.0
 * **RAM**: 12GB LPDDR5 @ 5500MT/s
-* **Storage**: SPI Flash (bootloader), eMMC Module: 16GB, UFS Module: 128GB, MicroSD card slot ×1
-* **Display**: HDMI 2.0: up to 4K@30Hz, MIPI DSI: 1× 4-lane
-* **Camera**: MIPI CSI: 1× 4-lane, MIPI CSI: 2× 2-lane
-* **Wireless**: Wi-Fi 6 (802.11 a/b/g/n/ac/ax), Bluetooth® 5.4 with BLE, Quectel FCU760K Module (AIC8800D80 chipset), 2× external antenna connectors
-* **Ethernet**: 1× Gigabit Ethernet with PoE support (via optional HAT)
-* **USB**: 1× USB 3.1 Type-A OTG, 3x USB 2.0 Type-A HOST, 1× USB 2.0 Type-C Power
-* **Expansion**: M.2 M Key: PCIe Gen3 x2 (supports 2230 NVMe SSDs), 40-pin 2.54mm GPIO header, UART/I2C/SPI/GPIO/PWM, 2×5V in/out, 2×3.3V out
-* **Audio**: 3.5mm audio jack
-* **Power**: 12V via USB Type-C or Power input header, Recommended: ≥18W light load, ≥24W full load
-* **Software**: Supports Radxa OS, Ubuntu Linux, Qualcomm Yocto Linux, Armbian, Arch, Deepin, Fedora, Windows
-* **Dimensions**: 85 mm x 56 mm
-
----
-
-<br>
-<img width="2880" height="1620" alt="image" src="https://github.com/user-attachments/assets/844e2227-b8bf-4105-b5df-fbd93a1836eb" />
-
-<br>
-<img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/5a571737-f6b0-46b8-af01-9cc0796d9611" />
-
-<br>
-<img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/34299713-848e-480a-9c91-93745414792f" />
-
 
 ---
 ## Test Results
