@@ -100,17 +100,16 @@ Then in the browser
 <img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/58f518ab-1a50-4ec2-9bc0-c6349f5f8876" />
 
 <br>
-frame 1
+ 
 <img width="850" height="450" alt="image" src="https://github.com/user-attachments/assets/1ebf8f8e-6404-4529-b064-ef2e1f1e33c2" />
-
-
-<br>
+ 
 
 ```
+## frame1
 ## Bounding Box output (x y w h — top-left corner + size)
-418 163 268 158
+544 455 91 63
 ## Reticle output (cx cy w h — center + size)
-552 242 268 158
+589 486 91 63
 ```
 
 
