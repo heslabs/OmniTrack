@@ -1,7 +1,7 @@
 # Lab - RTSP Video 
 
 ---
-### Setp 1: Start RTSP Video Stream Server
+### Setp 1: Start RTSP Video Server
 
 ```
 ## mediamtx on :8554, then publish:
