@@ -1,0 +1,111 @@
+# OmniTrack-server runtime config (AOT Nuitka onefile deploy).
+# All paths are absolute because the Nuitka binary chdirs to its onefile
+# unpack tmpdir at boot — relative paths would not resolve against the
+# install dir. Boot defaults to a deterministic LaSOT drone-5 image-folder
+# replay; swap [capture].pipeline for RTSP / MIPI / videotestsrc as needed.
+
+[capture]
+# LaSOT drone-5 sequence (3332 frames @ /home/deepmentor/sandbox/data/img/)
+
+#pipeline = "multifilesrc location=/home/deepmentor/sandbox/data/img/%08d.jpg start-index=1 loop=true caps=image/jpeg,framerate=30/1 ! jpegdec ! videoconvert ! videorate ! video/x-raw,format=NV12,width=1280,height=720,framerate=30/1 ! identity sync=true ! appsink name=sink emit-signals=true drop=1 max-buffers=1 sync=false"
+
+pipeline = "filesrc location=/home/deepmentor/sandbox/omnitrack_server/demo1a.mp4 ! decodebin ! appsink name=sink emit-signals=true drop=1 max-buffers=1 sync=false" 
+
+width  = 1280
+height = 720
+fps    = 30 
+ring_buffer_size = 3
+
+[tracker]
+model_bin   = "/home/deepmentor/sandbox/omnitrack_server/models/omnitrack_s.bin"
+#model_bin   = "/home/deepmentor/sandbox/omnitrack_server/models/ostrack_256_ce_r766_w8a16.bin"
+model_name  = "omnitrack_s"
+template_size  = 128 # 192
+search_size    = 256  # 384
+feat_sz        = 16  # 24 for 384, 16 for 256
+template_factor = 2.0
+search_factor   = 4.0
+# Path is set by start.sh's QNN_LIB_DIR env var; this absolute fallback only
+# runs if start.sh isn't sourced.
+qnn_lib_dir = "/home/deepmentor/sandbox/omnitrack_server/lib/aarch64-ubuntu-gcc9.4"
+perf_profile = "sustained"
+
+[init_refine]
+enable      = false
+model_bin   = ""
+use_gpu     = false
+# Mask tuning: prob_thresh is the cutoff on MT's probability map — LOWER
+# (e.g. 0.3) keeps more of the object's soft edges -> a LARGER refined box (fixes
+# "blob smaller than object"). sigma_frac is the click Gaussian spread.
+prob_thresh      = 0.3
+sigma_frac       = 0.04
+# Gate thresholds (failure-safety). See magictouch design spec.
+fg_min           = 0.002
+fg_max           = 0.60
+mean_prob_min    = 0.60
+area_ratio_min   = 0.05
+area_ratio_max   = 1.5
+center_shift_max = 1.0
+
+[fsm]
+lost_threshold        = 0.10
+lost_window           = 999999
+lost_area_ratio       = 0.55
+lost_max_velocity_px  = 80
+lost_size_grow_ratio  = 500.0
+auto_reinit                  = false
+auto_reinit_max              = 10
+auto_reinit_recovery_frames  = 30
+init_mode                    = "reticle"
+# Explicit operator bbox convention: "cxcywh" = object center (operator clicks
+# the target), "xywh" = top-left. The refiner and tracker need top-left;
+# "cxcywh" converts at init. (The operator client here sends center.)
+init_bbox_format             = "xywh"
+reticle_w                    = 79
+reticle_h                    = 53
+reticle_cx                   = 550
+reticle_cy                   = 465
+overlay_color_coded          = true
+
+[display]
+# Headless E2E: no HDMI sink.
+sink_pipeline = "appsrc name=src is-live=true do-timestamp=true format=time block=false ! video/x-raw,format=NV12,width=1280,height=720,framerate=30/1 ! queue max-size-buffers=2 leaky=downstream ! kmssink sync=false"
+#sink_pipeline = ""
+
+[network]
+#peer_ip       = "192.168.52.81"
+peer_ip       = "127.0.0.1"
+peer_bbox_port = 5004
+init_port      = 5005
+
+[thermal]
+zone_path     = "/sys/class/thermal/thermal_zone0/temp"
+high_threshold_c = 80
+low_threshold_c  = 75
+poll_interval_s  = 1.0
+
+[logging]
+trace_csv  = "/home/deepmentor/sandbox/omnitrack_server/logs/trace.csv"
+trace_max_bytes  = 524288000
+status_log_every = 30
+
+[debug]
+save_frames_every = 0
+save_dir = "/home/deepmentor/sandbox/omnitrack_server/logs/frames"
+
+[recording]
+enable = true
+encoder = "sw_h264"
+output_dir = "/home/deepmentor/sandbox/recordings"
+file_pattern = "evidence_%05d.mp4"
+max_size_bytes = 524288000
+encoder_bitrate = 2000000
+key_frame_period = 60
+trigger          = "always"
+
+[streaming]
+enable = false
+peer_ip = "127.0.0.1"
+peer_port = 5006
+encoder_bitrate = 2000000
+key_frame_period = 30
