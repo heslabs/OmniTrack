@@ -34,7 +34,7 @@ sudo ./start.sh
 **start.sh**
 ```
 #!/usr/bin/env bash
-cp -f runtime-rtsp.toml ./config/runtime.toml
+cp -f runtime-mp4.toml ./config/runtime.toml
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export QNN_SDK_ROOT="${QNN_SDK_ROOT:-${HERE}}"
