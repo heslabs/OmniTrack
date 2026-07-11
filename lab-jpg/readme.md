@@ -67,3 +67,14 @@ cd ~/sandbox/omnitrack_client
 python send_init.py 127.0.0.1 5005 546 463 79 53
 wait "$TRACKER_PID"
 ```
+
+---
+## Expected Results
+
+* Recorded evdience video: [[drive]](https://drive.google.com/file/d/1y3HtTs_gCodsUeZ-h_kj2gy86LLYymdN/view?usp=sharing)
+
+
+<br>
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/eaff5ce9-943c-4836-a848-bb204cbd7605" />
+ 
+
