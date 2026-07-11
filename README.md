@@ -9,21 +9,21 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 ### System Architectures
 
 #### Visual Tracking (AI & Computer Vision)
-* Onboard Edge Computing: Processors run lightweight models locally to eliminate latency and dependency on ground control stations.
-* Efficient AI Models: Systems use optimized architectures like YOLOv8 or centroid-based trackers to generate real-time target bounding boxes.
-* Control Loop Feedback: Proportional-Integral-Derivative (PID) controllers calculate the target's pixel offset from the frame center.
-* Gimbal & Flight Adjustments: Algorithms translate spatial errors into instant correction signals for the camera gimbal and flight controller.
+* **Onboard Edge Computing**: Processors run lightweight models locally to eliminate latency and dependency on ground control stations.
+* **Efficient AI Models**: Systems use optimized architectures like YOLOv8 or centroid-based trackers to generate real-time target bounding boxes.
+* **Control Loop Feedback**: Proportional-Integral-Derivative (PID) controllers calculate the target's pixel offset from the frame center.
+* **Gimbal & Flight Adjustments**: Algorithms translate spatial errors into instant correction signals for the camera gimbal and flight controller.
 
 #### Sensor-Fusion & Advanced Spatial Targeting
-* Mathematical Ranging: Systems like SPARC AI calculate coordinates using trigonometry, drone altitude, terrain elevation, and camera angles.
-* Multimodal Fusing: Hardware merges data from Acoustic Beamforming, LiDAR, and Visual AI to maintain a continuous tracking state.
-* Occlusion Handling: Combined sensor inputs predict target paths when subjects are hidden behind buildings, trees, or terrain.
+* **Mathematical Ranging**: Systems like SPARC AI calculate coordinates using trigonometry, drone altitude, terrain elevation, and camera angles.
+* **Multimodal Fusing**: Hardware merges data from Acoustic Beamforming, LiDAR, and Visual AI to maintain a continuous tracking state.
+* **Occlusion Handling**: Combined sensor inputs predict target paths when subjects are hidden behind buildings, trees, or terrain.
 
 #### Cognitive Tracking (LLMs, VLMs, & VLAs)
-* Vision-Language-Action (VLA): Models bridge the gap between perception and execution by mapping visual inputs directly to flight maneuvers.
-* Hybrid LLM-Vision Systems: Onboard logic processes complex environment semantics alongside real-time video telemetry.
-* Natural Language Control: Operators issue open-ended voice or text commands (e.g., "Follow the red vehicle that just turned left").
-* Zero-Shot Targeting: AI identifies and tracks novel targets on the fly without requiring predefined bounding boxes or prior training. 
+* **Vision-Language-Action (VLA)**: Models bridge the gap between perception and execution by mapping visual inputs directly to flight maneuvers.
+* **Hybrid LLM-Vision Systems**: Onboard logic processes complex environment semantics alongside real-time video telemetry.
+* **Natural Language Control**: Operators issue open-ended voice or text commands (e.g., "Follow the red vehicle that just turned left").
+* **Zero-Shot Targeting**: AI identifies and tracks novel targets on the fly without requiring predefined bounding boxes or prior training. 
 
 ---
 ## Example Platforms
