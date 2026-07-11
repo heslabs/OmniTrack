@@ -35,7 +35,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 * **SoC**: Qualcomm® QCS6490
 * **CPU**: 1× Kryo Prime @ 2.7GHz, 3× Kryo Gold @ 2.4GHz, 4× Kryo Silver @ 1.9GHz
 * **GPU**: Qualcomm® Adreno 643, OpenGL® ES 3.2, 2.0, 1.1, Vulkan® 1.1 / 1.2 / 1.3, OpenCL™ 2.2, DirectX Feature Level 12
-* **AI**: Total AI compute performance: 12 TOPS, Hexagon DSP with dual HVX, Hexagon Tensor Accelerator
+* **AI**: Total AI compute performance: 12 TOPS, Hexagon DSP with dual HVX, Hexagon Tensor Accelerator, Hexagon Coprocessor 2.0
 * **RAM**: 12GB LPDDR5 @ 5500MT/s
 * **Storage**: SPI Flash (bootloader), eMMC Module: 16GB, UFS Module: 128GB, MicroSD card slot ×1
 * **Display**: HDMI 2.0: up to 4K@30Hz, MIPI DSI: 1× 4-lane
@@ -49,8 +49,6 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 * **Software**: Supports Radxa OS, Ubuntu Linux, Qualcomm Yocto Linux, Armbian, Arch, Deepin, Fedora, Windows
 * **Dimensions**: 85 mm x 56 mm
 
-
-Hexagon Coprocessor 2.0
 ---
 <br>
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/e1c9f73e-5383-4db7-97e0-a4b79d79d074" />
