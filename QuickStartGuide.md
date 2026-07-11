@@ -24,6 +24,34 @@ This system operates as a zero-shot, template-matching visual tracker running lo
 * **Follow**: A live box tracks the target approximately 30 times per second. 
 
 
+
+
+---
+### System Architecture Overview
+ 
+The system processes video data linearly from Capture to FSM, which dynamically routes outputs to four concurrent downstream channels based on configuration.
+
+#### Core Component
+* **Capture**: Ingests raw pixel data from the camera sensor.
+* **Tracker**: Receives pixels, detects objects, and generates bounding box coordinates.
+* **FSM (Finite State Machine)**: Evaluates system state to dictate output behavior.
+
+#### Output Channel Behaviors
+* **HDMI Display**: Opt-in visual preview. Controlled via sink_pipeline.
+* **Network (UDP:5004)**: Always-on JSON feed. Emits bounding boxes and acts as a liveness heartbeat during idle states.
+* **Recording**: Opt-in storage. Saves evidence MP4 files alongside synchronized bbox.csv telemetry.
+* **Streaming**: Opt-in transmission. Delivers low-latency RTP H.264 video streams to a connected network peer.
+
+```
+[ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
+                                          |
+                                          +---> [network] UDP:5004 bbox JSON
+                                          |
+                                          +---> [recording] evidence mp4 + bbox.csv
+                                          |
+                                          +---> [streaming] RTP H.264 to peer 
+```
+
 ---
 ## Operation Modes
  
@@ -58,24 +86,6 @@ Which compiled model to load and its geometry.
 [streaming] RTP H.264 to a LAN peer
 [logging] persistent trace CSV
 ```
-
----
-#### Data Flow
-Pixels enter at the left, the FSM decides what to do, four output channels carry the result.
-* Three output channels are opt-in: recording, streaming, and (effectively) HDMI display
-  * set sink_pipeline = "" to disable
-* The bbox UDP feed is always on — it doubles as a liveness signal: idle and tracking states both emit datagrams.
-
-```
-[ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
-                                          |
-                                          +---> [network] UDP:5004 bbox JSON
-                                          |
-                                          +---> [recording] evidence mp4 + bbox.csv
-                                          |
-                                          +---> [streaming] RTP H.264 to peer 
-```
-
 
 ---
 ### Start RTSP video stream
