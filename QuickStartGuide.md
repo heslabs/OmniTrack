@@ -90,6 +90,16 @@ Which compiled model to load and its geometry.
 ```
 
 
+---
+### Test Results
+
+
+
+### Power consumption
+
+<img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/5dad1a63-616d-43f8-a8b2-7304ad569e03" />
+
+
 
 
 
