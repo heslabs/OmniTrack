@@ -64,6 +64,20 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 <br>
 <img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/34299713-848e-480a-9c91-93745414792f" />
 
+
+---
+## Test Results
+
+### Recorded output video
+
+<img width="850" height="550" alt="image" src="https://github.com/user-attachments/assets/36025290-fb19-46ce-923c-0ed67100a215" />
+
+
+### Power consumption
+
+<img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/5dad1a63-616d-43f8-a8b2-7304ad569e03" />
+
+
 ----
 ## Resources from Ecosystem Partners
 
