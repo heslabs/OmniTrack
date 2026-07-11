@@ -6,7 +6,7 @@
 
 On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follow targets using local processing, transforming raw sensor data into immediate flight control actions. This capability has evolved from basic pixel tracking to advanced AI systems that understand natural language commands.
 
-### Core Processing Architectures
+### System Architectures
 
 #### Visual Tracking (AI & Computer Vision)
 * Onboard Edge Computing: Processors run lightweight models locally to eliminate latency and dependency on ground control stations.
