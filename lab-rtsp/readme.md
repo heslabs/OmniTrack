@@ -31,7 +31,15 @@ ffplay -rtsp_transport tcp "rtsp://$1:8554/drone18"
 ```
 
 ---
-### Step 3: Start on-device tracking
+### Step 3: Modify the configuration file
+
+```
+cd ~/sandbox/omnitrack_server
+vim config/
+```
+
+---
+### Step 4: Start on-device tracking
 
 ```
 cd ~/sandbox/omnitrack_server
