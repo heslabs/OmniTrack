@@ -81,7 +81,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 
 
 ----
-## Resources from Ecosystem Partners
+## Resources
 
 * Cognitive Drone: A Vision-Language-Action Model & Benchmark for UAV Cognitive Reasoning [[Github]](https://cognitivedrone.github.io)
 * UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models [[arxiv]](https://arxiv.org/abs/2604.02241)
