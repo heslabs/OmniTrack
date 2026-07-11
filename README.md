@@ -1,5 +1,5 @@
 # OmniTrack
-**On-device tracking of drone target**
+### On-device tracking of drone target
 
 ---
 ## Description
@@ -65,7 +65,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 <img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/34299713-848e-480a-9c91-93745414792f" />
 
 ----
-## Resources from Ecosystem partners
+## Resources from Ecosystem Partners
 
 
 
