@@ -2,11 +2,26 @@
 
 
 ---
-## Aim, Lock and Follw
-Aim into the reticle, press start — it follows at ~30 FPS, on-device.
-* **Aim**: Frame the target in the on-screen reticle. No clicking.
-* **Lock**: Press start and it grabs the pixels in the reticle.
-* **Follow**: A live box tracks it, ~30×/sec.
+## On-Device Object Tracking Pipeline
+This system operates as a zero-shot, template-matching visual tracker running locally on your device.
+
+#### Core Mechanics
+* **Zero-Shot Initialization**: The system does not require pre-training on specific objects or coordinate inputs.
+* **Dynamic Template Matching**: Pressing start captures the pixel data within the reticle to create a reference visual template.
+* **Real-Time Processing**: The device benchmarks at ~30 frames per second (FPS), executing search algorithms over subsequent frames to update the object's position.
+* **Instant Reset**: Interrupting the loop allows the user to redefine the visual template instantly by re-framing the target
+
+#### Step-by-Step Workflow
+
+```
+[ Aim Target ] ---> [ Press Start ] ---> [ Lock Pixels ] ---> [ Loop: Track @ 30 FPS ]
+       ^                                                                     |
+       |_______________________ (Re-aim Anytime) ____________________________| 
+```
+
+* **Aim**: Frame the target in the on-screen reticle without clicking.
+* **Lock**: Press start to grab the pixels in the reticle.
+* **Follow**: A live box tracks the target approximately 30 times per second. 
 
 ---
 ### Start RTSP video stream
