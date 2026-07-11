@@ -105,7 +105,7 @@ Then in the browser
  
 
 ```
-## frame1
+## frame 1
 ## Bounding Box output (x y w h — top-left corner + size)
 544 455 91 63
 ## Reticle output (cx cy w h — center + size)
