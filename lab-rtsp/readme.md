@@ -1,4 +1,4 @@
-# Lab - RTSP Video 
+## Tracking object from RTSP video source
 
 ---
 ### Setp 1: Start RTSP video server
