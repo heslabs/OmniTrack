@@ -77,6 +77,14 @@ python send_init.py 127.0.0.1 5005 546 463 79 53
 wait "$TRACKER_PID"
 ```
 
+---
+### Test Results
+
+* Recorded evidence video: [[drive]](https://drive.google.com/file/d/1IFOkkN2ocJV2ipTCb4AF0KaoZyVUtPfX/view?usp=sharing)
+
+<br>
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/04e6e131-37b4-44d8-b167-9d01e4049e9c" />
+
 
 ---
 ## Prerequisites
