@@ -1,7 +1,7 @@
 # Lab - RTSP Video 
 
 ---
-### Start RTSP Video Stream Server
+### Setp 1: Start RTSP Video Stream Server
 
 ```
 ## mediamtx on :8554, then publish:
@@ -12,11 +12,12 @@ rtsp://127.0.0.1:8554/drone18
 * video.mp4 [[Drive]](https://drive.google.com/file/d/1JByr_Y-hDMpfA7WIG9jJH_s_0etgXqgb/view?usp=sharing)
 
 ---
-### View RTSP video stream 
+### Step 2: View RTSP video stream 
+
 ```
 vlc rtsp://127.0.0.1:8554/drone18
 vlc rtsp://192.168.52.83:8554/drone18
-ffplay -rtsp_transport tcp "rtsp://192.168.52.83:8554/drone18"
+ffplay -rtsp_transport tcp "rtsp://192.168.52.83:8554/drone"
 ```
 
 **run-ffplay.sh**
@@ -29,8 +30,12 @@ fi
 ffplay -rtsp_transport tcp "rtsp://$1:8554/drone18"
 ```
 
+
 ---
-### Start MediaMTX
+## Prerequisites
+
+---
+### Install and Start MediaMTX
 
 To start MediaMTX, run the standalone binary executable file or launch its official container, depending on your system setup.
 * Execution Methods: Using Standalone Binary: Navigate to the directory where you extracted the MediaMTX files and execute the command corresponding to your operating system:
