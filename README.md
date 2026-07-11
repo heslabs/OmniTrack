@@ -31,7 +31,7 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 * Chipset: Qualcomm Dragonwing™ [QCS6490](https://www.qualcomm.com/internet-of-things/products/q6-series/qcs6490)
 * Boards: Radxa Dragon [Q6A](https://radxa.com/products/dragon/q6a/)
 
-### Tech Spcs
+### Tech Specs
 * **SoC**: Qualcomm® QCS6490
 * **CPU**: 1× Kryo Prime @ 2.7GHz, 3× Kryo Gold @ 2.4GHz, 4× Kryo Silver @ 1.9GHz
 * **GPU**: Qualcomm® Adreno 643, OpenGL® ES 3.2, 2.0, 1.1, Vulkan® 1.1 / 1.2 / 1.3, OpenCL™ 2.2, DirectX Feature Level 12
