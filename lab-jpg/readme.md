@@ -71,7 +71,7 @@ wait "$TRACKER_PID"
 ---
 ## Expected Results
 
-* Recorded evdience video: [[drive]](https://drive.google.com/file/d/1y3HtTs_gCodsUeZ-h_kj2gy86LLYymdN/view?usp=sharing)
+* Recorded evidence video: [[drive]](https://drive.google.com/file/d/1y3HtTs_gCodsUeZ-h_kj2gy86LLYymdN/view?usp=sharing)
 
 
 <br>
