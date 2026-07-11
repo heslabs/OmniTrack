@@ -93,6 +93,9 @@ Which compiled model to load and its geometry.
 ---
 ### Test Results
 
+### Recorded output video
+
+<img width="850" height="550" alt="image" src="https://github.com/user-attachments/assets/36025290-fb19-46ce-923c-0ed67100a215" />
 
 
 ### Power consumption
