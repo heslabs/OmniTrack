@@ -23,7 +23,6 @@ bash ./Anaconda3-2025.12-2-Linux-x86_64.sh
 ```
 conda list
 # packages in environment at /home/demo/anaconda3:
-#
 # Name                           Version               Build               Channel
 _anaconda_depends                2025.12               py313_mkl_0
 ```
