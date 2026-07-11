@@ -65,7 +65,7 @@ wait "$TRACKER_PID"
 ```
 
 ---
-### Expected Results
+### Test Results
 
 * Recorded evidence video: [[drive]](https://drive.google.com/file/d/1EJZmMKFM63OsOeuTtgfxFDHuVIkZkccL/view?usp=sharing)
 
