@@ -73,9 +73,9 @@ On-device tracking enables unmanned aerial vehicles (UAVs) to autonomously follo
 <img width="850" height="550" alt="image" src="https://github.com/user-attachments/assets/36025290-fb19-46ce-923c-0ed67100a215" />
 
 
-### Power consumption
+### Power consumption: < 5W (12V@0.42A)
 
-<img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/5dad1a63-616d-43f8-a8b2-7304ad569e03" />
+<img width="450" height="250" alt="image" src="https://github.com/user-attachments/assets/5dad1a63-616d-43f8-a8b2-7304ad569e03" />
 
 
 ----
