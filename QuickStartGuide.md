@@ -23,6 +23,55 @@ This system operates as a zero-shot, template-matching visual tracker running lo
 * **Lock**: Press start to grab the pixels in the reticle.
 * **Follow**: A live box tracks the target approximately 30 times per second. 
 
+
+---
+## Operation Modes
+ 
+Configure your pipeline by defining inputs, behavior, and outputs in **config/runtime.toml**. Update these parameters and restart the service to apply changes. Below is a structured implementation of your operational modes for the runtime configuration file.
+
+```
+## ~/sandbox/omnitrack_server/config/runtime.toml
+# ==========================================
+# RUNTIME CONFIGURATION
+# ==========================================
+## Input
+[capture]
+* MIPI CSI Camera
+* RTSP
+* Mp4
+* Image Sequence
+ 
+## Behavior
+[fsm]
+How the tracker behaves:
+* init mode (reticle vs explicit)
+* loss heuristic thresholds
+* sticky tracking (auto-reinit)
+* color overlay
+[tracker]
+Which compiled model to load and its geometry.
+
+## Output
+[network] bbox UDP destination + init port
+[display] HDMI preview on/off
+[recording] evidence mp4 + bbox CSV sidecar
+[streaming] RTP H.264 to a LAN peer
+[logging] persistent trace CSV
+```
+
+<br>
+
+```
+[ Capture ] ---> [ Tracker ] ---> [ FSM ] +---> [display] HDMI preview
+                                          |
+                                          +---> [network] UDP:5004 bbox JSON
+                                          |
+                                          +---> [recording] evidence mp4 + bbox.csv
+                                          |
+                                          +---> [streaming] RTP H.264 to peer 
+```
+
+
 ---
 ### Start RTSP video stream
 
