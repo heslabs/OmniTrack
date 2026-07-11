@@ -6,10 +6,10 @@
 ```
 ## mediamtx on :8554, then publish:
 ffmpeg -re -stream_loop -1 -i video.mp4 -c:v copy -an -f rtsp \
-rtsp://127.0.0.1:8554/drone18
+rtsp://127.0.0.1:8554/drone
 ```
 
-* video.mp4 [[Drive]](https://drive.google.com/file/d/1JByr_Y-hDMpfA7WIG9jJH_s_0etgXqgb/view?usp=sharing)
+* Downlaod test video: video.mp4 [[Drive]](https://drive.google.com/file/d/1JByr_Y-hDMpfA7WIG9jJH_s_0etgXqgb/view?usp=sharing)
 
 ---
 ### Step 2: View RTSP video stream 
