@@ -36,7 +36,8 @@ Board UART2 TELEM2 · 115200 8N1 ·
 
 ---
 ## Video Downlink
-RTP H.264 to the ground.
+
+* RTP H.264 to the ground.
 * Latency: ≈150 ms on LAN; +50–200 ms over radio.
 
 <br>
