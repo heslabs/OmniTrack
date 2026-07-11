@@ -7,6 +7,8 @@
 ### MP4 video source
 ~/sandbox/omnitrack_server/demo1a.mp4
 ```
+
+* Downlaod test video: demo1a.mp4 [[drive]](https://drive.google.com/file/d/1JByr_Y-hDMpfA7WIG9jJH_s_0etgXqgb/view?usp=sharing)
  
 ---
 ### Step 2: Modify the configuration file
