@@ -1,5 +1,13 @@
 # Quick Start Guide
 
+
+---
+## Aim, Lock and Follw
+Aim into the reticle, press start — it follows at ~30 FPS, on-device.
+* **Aim**: Frame the target in the on-screen reticle. No clicking.
+* **Lock**: Press start and it grabs the pixels in the reticle.
+* **Follow**: A live box tracks it, ~30×/sec.
+
 ---
 ### Start RTSP video stream
 
